@@ -32,7 +32,7 @@ plugins:
   #       - docs/gen_ref_pages.py
   - mkdocstrings:
       enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
-      custom_templates: templates
+      # custom_templates: templates
       default_handler: python
       handlers:
         python:
