@@ -4,7 +4,7 @@
 
 <!-- ![Image title](img/logo.png){ align=right width=300 } -->
 
-check out the [Lecture](Lecture)
+This repository contains the course materials for the Data Visualization and Analysis Methods (DVAM) course offered at Peking University. The course aims to equip students with essential skills in data visualization and analysis, enabling them to effectively interpret and present data insights.
 
 </div>
 
