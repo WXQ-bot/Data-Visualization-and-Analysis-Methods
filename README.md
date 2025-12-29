@@ -2,7 +2,7 @@
 
 ## 📣 News
 
-* **[2025/12/29]**:🤗 We release **Course Data-Visualization-and-Analysis-Methods Community**.
+* **[2025/12/29]**: 🤗 We release **Course Data-Visualization-and-Analysis-Methods Community**.
 
 ## 📖 Students Projects
 
