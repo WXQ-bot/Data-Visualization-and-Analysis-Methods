@@ -8,7 +8,7 @@
 
 > Group ID: Projects Topic: Related GitHub link with detailed README files —— Team numbers
 
-G1: Cryo-ET Analysis and Visualization Platform: [pyp software GitHub Linkn(https://github.com/nextpyp/pyp) —— James, Christy, Vivek
+G1: Cryo-ET Analysis and Visualization Platform: [pyp software GitHub Link](https://github.com/nextpyp/pyp) —— James, Christy, Vivek
 
 G2: 
 
