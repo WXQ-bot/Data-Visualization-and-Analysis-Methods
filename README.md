@@ -4,6 +4,12 @@
 
 * **[2025/12/29]**: 🤗 We release **Course Data-Visualization-and-Analysis-Methods Community**.
 
+## 📅 Requirements
+
+1. The topic is up to your group's major
+2. Each group should be up most to 4 people
+
+
 ## 📖 Students Group Projects
 
 > Group ID: Projects Topic: Related GitHub link with detailed README files —— Team numbers
