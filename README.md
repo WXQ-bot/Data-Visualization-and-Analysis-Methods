@@ -8,7 +8,7 @@
 
 > Group ID: Projects Topic: Related GitHub link with detailed README files
 
-G1: Metagenomics Analysis Platform; (GitHub Link)[https://github.com/PKU-EMBL/awesome-ai4metagenomics-best-practice]
+G1: Metagenomics Analysis Platform; [GitHub Link](https://github.com/PKU-EMBL/awesome-ai4metagenomics-best-practice)
 
 G2: 
 
