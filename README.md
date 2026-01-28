@@ -30,7 +30,7 @@
 
 G1: 
 
-G2: 
+G2: Beijing AirQuality Visualization and Forecast Platform:https://github.com/1lizhongyuan/Group2-AirQuality-visualization-forecast —— 李忠远，史恒震，肖晟
 
 G3: 
 
