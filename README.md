@@ -36,7 +36,7 @@ G3: 深港水环境耐药细菌的分布特征及其对理化因子的响应机�
 
 G4: 
 
-G5: 
+G5: 秸秆资源化利用方式生命周期碳减排效果评价：https://github.com/lighear/Group5-LCA-of-Carbon-Reduction-Evaluation-Analysis-main —— 李筱，童卓琳，李昊
 
 G6: 
 
