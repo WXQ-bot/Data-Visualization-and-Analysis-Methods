@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CryoMethViz</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <h1 class="logo">CryoMethViz <span class="muted-small">(冰湖甲烷视界)</span></h1>
+        <nav class="nav">
+            <a href="#overview">研究简介</a>
+            <a href="#pdf-viewer">PDF 文档</a>
+            <a href="#image-gallery">图片展示</a>
+            <a href="#about">关于</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section id="hero" class="hero">
+        <div>
+            <h2>冰冻圈湖中甲烷排放的温度依赖性 — 冰湖甲烷视界</h2>
+            <p class="lead">展示 CryoMethViz 项目中可视化资料，包含论文/报告 PDF、关键图像与研究要点速览。</p>
+            <div class="hero-actions">
+                <button id="open-overview">查看研究摘要</button>
+                <a class="btn" href="#pdf-viewer">浏览文档</a>
+            </div>
+        </div>
+        <div class="hero-preview shift-right">
+            <img src="assets/images/lake standardized temp vs. flux10.png" alt="preview">
+            <div class="hero-preview-caption muted-small">示意：标准化温度与甲烷通量（扩散/鼓泡/总通量）关系的核心结果图。</div>
+        </div>
+    </section>
+
+    <section id="overview" class="card">
+        <h3>研究简介（摘要）</h3>
+        <div class="summary">
+            <p>本研究系统整合冰冻圈湖泊温室气体数据，使用 Arrhenius 方法量化甲烷通量的温度敏感性（表观活化能 Ea）。分别分析三类排放路径：扩散 (dCH4)、鼓泡 (eCH4) 与总通量 (tCH4)，并考察湖泊尺度（面积、深度）对温度敏感性的调制。</p>
+            <button class="toggle-more" data-target="#full-text">展开/折叠完整研究要点</button>
+            <div id="full-text" class="more-text" hidden>
+                <ol>
+                    <li>研究背景：高纬度寒区湖泊可能随着变暖释放大量甲烷，形成气候正反馈。</li>
+                    <li>方法：用 Arrhenius 回归估计 Ea；对站点逐个拟合并按尺度分组分析。</li>
+                    <li>发现：鼓泡通量 Ea 一般显著高于扩散通量；Ea 在湖泊间高度异质；存在临界尺度使得大/深湖成为强排放源。</li>
+                    <li>数据：来自 Cryosphere Lake Greenhouse Gases Database 2025（DOI: 10.6084/m9.figshare.29146295）与文献、公共数据库整合。</li>
+                    <li>意义：为高纬度甲烷反馈的参数化与监测目标选择提供定量依据。</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="pdf-viewer" class="card">
+        <h3>PDF 文档（点击卡片在右侧预览）</h3>
+
+        <div class="pdf-layout">
+            <div class="pdf-list">
+                <input id="pdf-search" placeholder="按标题过滤 PDF（例如：Ea、method）">
+
+                <!-- 标签过滤 -->
+                <div class="tag-filter" id="tag-filter">
+                    <button class="tag active" data-tag="all">全部</button>
+                    <button class="tag" data-tag="main">主文档</button>
+                    <button class="tag" data-tag="supp">Supplement</button>
+                </div>
+
+                <div id="pdf-cards" class="cards">
+                    <!-- PDF 卡片示例，增加 data-tags 与 badge -->
+                    <div class="card-item" data-src="assets/pdfs/doc.pdf" data-title="研究主文档 — Temperature dependences" data-tags="main,ea">
+                        <img src="assets/images/pre_doc.png" alt="pdf">
+                        <div class="card-meta">
+                            <strong>研究主文档 <span class="badge">主</span></strong>
+                            <small>Temperature dependences of methane emissions in cryosphere lakes</small>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn small view-pdf">预览</button>
+                            <a class="btn small" href="assets/pdfs/doc.pdf" download>下载</a>
+                        </div>
+                    </div>
+
+                    <div class="card-item" data-src="assets/images/Supply.png" data-title="Supplementary Figures" data-tags="supp,figures">
+                        <img src="assets/images/Supply.png" alt="pdf">
+                        <div class="card-meta">
+                            <strong>Supplementary <span class="badge alt">补充</span></strong>
+                            <small>Figures & tables</small>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn small view-pdf">预览</button>
+                            <a class="btn small" href="assets/images/Supply.png" download>下载</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pdf-preview">
+                <div class="preview-toolbar">
+                    <span id="preview-title">未选择文档</span>
+                    <div class="toolbar-actions">
+                        <a id="open-new-tab" class="btn small" target="_blank">在新标签打开</a>
+                        <a id="download-current" class="btn small" href="#" download>下载</a>
+                    </div>
+                </div>
+                <div class="iframe-wrap">
+                    <iframe id="pdf-frame" src="assets/pdfs/doc.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="image-gallery" class="card">
+        <h3>图片画廊</h3>
+        <div class="image-container" id="images">
+            <figure class="thumb">
+                <img src="assets/images/lake standardized temp vs. flux10.png" alt="标准化温度 vs 甲烷通量" data-full="assets/images/lake standardized temp vs. flux10.png">
+                <figcaption>核心结果：标准化温度与扩散/鼓泡/总甲烷通量关系</figcaption>
+            </figure>
+            <figure class="thumb">
+                <img src="assets/images/lake depth temp vs. log10 flux-4.png" alt="水深下温度 vs 甲烷通量" data-full="assets/images/lake depth temp vs. log10 flux-4.png">
+                <figcaption>机制分析：不同水深条件下温度与甲烷通量关系</figcaption>
+            </figure>
+            <figure class="thumb">
+                <img src="assets/images/Parallel_Coordinates_Plot.png" alt="并行坐标图" data-full="assets/images/Parallel_Coordinates_Plot.png">
+                <figcaption>补充分析：多变量并行坐标图</figcaption>
+            </figure>
+            <figure class="thumb">
+                <img src="assets/images/Facet_Grid_Plot.png" alt="分面网格图" data-full="assets/images/Facet_Grid_Plot.png">
+                <figcaption>补充分析：分面展示不同类别下的关系</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- 关于：不再使用 .small 限制宽度 -->
+    <section id="about" class="card">
+        <h3>关于本展示</h3>
+        <p>本页面为 Group7 针对 CryoMethViz 文档的轻量展示工具，主要用于快速预览 PDF 与图片素材。将真实数据与图像放置于 assets/ 下即可。</p>
+        <p class="muted">提示：可用下载按钮快速获取所需资料。</p>
+    </section>
+
+    <section id="data-assets" class="card">
+        <h3>项目数据资产表</h3>
+        <div class="assets-panel">
+            <!-- 搜索与分类控件已移除（更简洁的展示） -->
+            <div class="assets-table-wrap">
+                <table class="assets-list">
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>类别</th>
+                            <th>含义</th>
+                            <th class="col-actions">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-name="Lakedat2_25.csv" data-cat="基础数据">
+                            <td class="asset-name"><strong>Lakedat2_25.csv</strong></td>
+                            <td>基础数据</td>
+                            <td>多源整合后的湖泊甲烷分析主数据表，包含水温、扩散/鼓泡/总通量及站点与空间信息</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/data/Lakedat2_25.csv" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="Site_with_T_and_CH4.csv" data-cat="样本信息">
+                            <td class="asset-name"><strong>Site_with_T_and_CH4.csv</strong></td>
+                            <td>样本信息</td>
+                            <td>同时具备水温与甲烷通量的有效观测站点清单</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/data/Site_with_T_and_CH4.csv" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="Lake_Diff_site2504.csv" data-cat="样本信息">
+                            <td class="asset-name"><strong>Lake_Diff_site2504.csv</strong></td>
+                            <td>样本信息</td>
+                            <td>具备扩散通量（dCH₄）的湖泊站点集合</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/data/Lake_Diff_site2504.csv" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="Lake_Eb_site2504.csv" data-cat="样本信息">
+                            <td class="asset-name"><strong>Lake_Eb_site2504.csv</strong></td>
+                            <td>样本信息</td>
+                            <td>具备鼓泡通量（eCH₄）的湖泊站点集合</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/data/Lake_Eb_site2504.csv" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="lake standardized temp vs. flux10.png" data-cat="核心结果图">
+                            <td class="asset-name"><strong>lake standardized temp vs. flux10.png</strong></td>
+                            <td>核心结果图</td>
+                            <td>标准化温度与扩散、鼓泡及总甲烷通量关系的综合展示</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/images/lake standardized temp vs. flux10.png" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="lake depth temp vs. log10 flux-4.png" data-cat="机制分析图">
+                            <td class="asset-name"><strong>lake depth temp vs. log10 flux-4.png</strong></td>
+                            <td>机制分析图</td>
+                            <td>不同水深条件下温度与甲烷通量关系的变化</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/images/lake depth temp vs. log10 flux-4.png" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="Parallel_Coordinates_Plot.png" data-cat="补充分析图">
+                            <td class="asset-name"><strong>Parallel_Coordinates_Plot.png</strong></td>
+                            <td>补充分析图</td>
+                            <td>多变量并行坐标图，用于整体关系探索</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/images/Parallel_Coordinates_Plot.png" download>下载</a>
+                            </td>
+                        </tr>
+                        <tr data-name="Facet_Grid_Plot.png" data-cat="补充分析图">
+                            <td class="asset-name"><strong>Facet_Grid_Plot.png</strong></td>
+                            <td>补充分析图</td>
+                            <td>分组分面展示不同类别下的变量关系</td>
+                            <td class="col-actions">
+                                <a class="btn tiny" href="assets/images/Facet_Grid_Plot.png" download>下载</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         </div>
+     </section>
+</main>
+
+<!-- 图片放大 & PDF 弹窗（简单实现） -->
+<div id="lightbox" class="lightbox" hidden>
+    <div class="lightbox-inner">
+        <button id="lb-close" class="close">&times;</button>
+        <img id="lb-img" src="" alt="">
+        <div id="lb-caption" class="caption"></div>
+    </div>
+</div>
+
+<script src="js/viewer.js"></script>
+</body>
+</html>

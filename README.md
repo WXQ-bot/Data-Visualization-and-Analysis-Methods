@@ -40,7 +40,7 @@ G5:
 
 G6: 
 
-G7: 
+G7: 冻层湖泊中甲烷排放的温度依赖性研究：https://github.com/FAIRY123456789/Data-Visualization-and-Analysis-Methods/tree/G7 —— 苏治平，符育，张一腾
 
 G8: 
 
