@@ -42,7 +42,7 @@ G6:
 
 G7: 
 
-G8: 
+G8: 小鼠蛋白质相互作用网络可视化分析项目：https://github.com/Cheliosoops/DVAM_G8 —— 徐永祺，刘祥瑞，赵张欣悦
 
 G9: 
 
