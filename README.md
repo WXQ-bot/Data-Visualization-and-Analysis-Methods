@@ -1,4 +1,4 @@
-<img width="848" height="255" alt="image" src="https://github.com/user-attachments/assets/c24aa3e0-2657-415b-9c34-e1f3138f2610" />## PKU EMBL | Data Visualization and Analysis Methods
+## PKU EMBL | Data Visualization and Analysis Methods
 
 ## 📣 News
 
