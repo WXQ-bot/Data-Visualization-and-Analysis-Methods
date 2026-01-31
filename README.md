@@ -40,7 +40,7 @@ G5: 秸秆资源化利用方式生命周期碳减排效果评价：https://githu
 
 G6: Group 6 Final Project: https://github.com/WHUEugene/Group6-DVAM-Final-Project —— Group 6
 
-G7: 
+G7: 冻层湖泊中甲烷排放的温度依赖性研究：https://github.com/FAIRY123456789/Data-Visualization-and-Analysis-Methods/tree/G7 —— 苏治平，符育，张一腾
 
 G8: 小鼠蛋白质相互作用网络可视化分析项目：https://github.com/Cheliosoops/DVAM_G8 —— 徐永祺，刘祥瑞，赵张欣悦
 
