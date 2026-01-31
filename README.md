@@ -44,7 +44,7 @@ G7:
 
 G8: 
 
-G9: 
+G9: MOF材料的CO2吸附与自身结构特征、元素组成的相关性分析：https://github.com/WXQ-bot/Data-Visualization-and-Analysis-Methods-吴晓倩，古思莹，杨晨，白亚冉
 
 G10: 
 
