@@ -38,7 +38,7 @@ G4:
 
 G5: 秸秆资源化利用方式生命周期碳减排效果评价：https://github.com/lighear/Group5-LCA-of-Carbon-Reduction-Evaluation-Analysis-main —— 李筱，童卓琳，李昊
 
-G6: 
+G6: Group 6 Final Project: https://github.com/WHUEugene/Group6-DVAM-Final-Project —— Group 6
 
 G7: 
 
@@ -82,4 +82,3 @@ G18: 识别、量化与比较交通边界对即时配送的阻碍效应——以
   note         = {Accessed: 2024-05-20}
 }
 ```
-
